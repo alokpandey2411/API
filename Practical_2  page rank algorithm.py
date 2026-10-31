@@ -1,6 +1,11 @@
 import numpy as np
 from scipy.sparse import csc_matrix
 
+
+
+
+
+
 def pageRank(G,s = .85,maxerr = .0001):
     n = G.shape[0]
     # transform G into markov matrix A
@@ -11,6 +16,8 @@ def pageRank(G,s = .85,maxerr = .0001):
 
     # bool array of sink states
     sink = rsums==0
+
+    
 
     # Compute pagerank r until we converge
     ro, r = np.zeros(n), np.ones(n)
